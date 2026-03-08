@@ -4,20 +4,28 @@
 #include <Arduino_ConnectionHandler.h>
 
 const char SSID[]     = SECRET_SSID;    // Network SSID (name)
-const char PASS[]     = SECRET_PASS;    // Network password (use for WPA, or use as key for WEP)
+const char PASS[]     = SECRET_OPTIONAL_PASS;    // Network password (use for WPA, or use as key for WEP)
 
-void onAlarmChange();
+void onArmChange();
+void onDisarmChange();
+void onHomeChange();
 void onPanicChange();
-void onPartialChange();
 
-CloudSwitch alarm;
+CloudSwitch arm;
+CloudSwitch disarm;
+CloudSwitch home;
 CloudSwitch panic;
-CloudSwitch partial;
 
 void initProperties(){
-  ArduinoCloud.addProperty(alarm, READWRITE, ON_CHANGE, onAlarmChange);
+
+  ArduinoCloud.addProperty(arm, READWRITE, ON_CHANGE, onArmChange);
+  ArduinoCloud.addProperty(disarm, READWRITE, ON_CHANGE, onDisarmChange);
+  ArduinoCloud.addProperty(home, READWRITE, ON_CHANGE, onHomeChange);
   ArduinoCloud.addProperty(panic, READWRITE, ON_CHANGE, onPanicChange);
-  ArduinoCloud.addProperty(partial, READWRITE, ON_CHANGE, onPartialChange);
+
+
+  ArduinoCloud.updateCertificate(CERT_AUTHORITY, CERT_SERIAL, CERT_NOT_BEFORE, CERT_NOT_AFTER, CERT_SIGNATURE_RS);
+
 }
 
 WiFiConnectionHandler ArduinoIoTPreferredConnection(SSID, PASS);

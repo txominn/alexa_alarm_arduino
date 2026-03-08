@@ -1,16 +1,36 @@
 {
   "cpu": {
     "fqbn": "arduino:samd:nano_33_iot",
-    "name": "Arduino NANO 33 IoT",
+    "name": "",
     "type": "serial"
   },
   "secrets": [
     {
-      "name": "SECRET_SSID",
+      "name": "CERT_AUTHORITY",
       "value": ""
     },
     {
-      "name": "SECRET_PASS",
+      "name": "CERT_NOT_AFTER",
+      "value": ""
+    },
+    {
+      "name": "CERT_NOT_BEFORE",
+      "value": ""
+    },
+    {
+      "name": "CERT_SERIAL",
+      "value": ""
+    },
+    {
+      "name": "CERT_SIGNATURE_RS",
+      "value": ""
+    },
+    {
+      "name": "SECRET_OPTIONAL_PASS",
+      "value": ""
+    },
+    {
+      "name": "SECRET_SSID",
       "value": ""
     }
   ],
