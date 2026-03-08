@@ -1,6 +1,6 @@
 # Alexa Alarm Virtual Remote
 
-An Arduino-based IoT solution to "Alexify" your Home Alarm security system using Arduino IoT Cloud. It emulates a physical remote control by activating relays or digital inputs on your existing alarm panel.
+An Arduino-based IoT solution to "Alexify" your Home Alarm security system using Arduino IoT Cloud. It emulates a physical remote control by activating digital inputs to control your existing alarm remote.
 
 ## Features (Version 2.1)
 - **Cloud Synchronization Protection**: Wait for 20s after connecting before accepting any cloud commands to ensure stable state.
