@@ -3,8 +3,8 @@
   Project: Alexa_Alarm
   Author: txomin
   Email: df.antonacci@gmail.com
-  Date: 04/02/2025
-  Revision: 2.0
+  Date: 08/03/2026
+  Revision: 2.1
   License: Public Domain
 */
 
